@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1 Where should I live in London
+  p Add postcodes of up to 5 locations you want to be able to travel to
+  form(name="submit-locations" method="get" action="get-results") 
+    div.input
+      span.label Location 1
+      input(type="text" name="location-1" value="nw54ap")
+    div.input
+      span.label Location 2
+      input(type="text" name="location-2" value="E1w3ss")
+    div.input
+      span.label Location 3
+      input(type="text" name="location-3" value="se164tn")
+    div.input
+      span.label Location 4
+      input(type="text" name="location-4" value="")
+    div.input
+      span.label Location 5
+      input(type="text" name="location-5" value="")
+    div.actions
+      input(type="submit" value="Where should I live?")
+

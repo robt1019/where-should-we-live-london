@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 results
+  ul
+  each item in data[0]
+    li 
+    div Location: #{item.location}
+    div Average journey time: #{item.averageJourneyTime}
+    div Journey times: #{item.journeys}
+    div Journey time spread: #{item.spread}
+
+
