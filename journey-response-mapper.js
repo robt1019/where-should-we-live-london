@@ -139,14 +139,8 @@ const getResults = async (locationsToCheck) => {
     };
   });
 
-  return [sortedListWithDetails.slice(0, 4)];
+  return [sortedListWithDetails.slice(0, 5)];
 };
-
-const locations = ["n52sh", "e1w3ss", "NW13AL", "EC3V4AB"];
-
-getResults(locations).then((res) => {
-  console.log(res);
-});
 
 module.exports = {
   getResults,
