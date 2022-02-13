@@ -8,7 +8,9 @@ router.get("/", function (req, res, next) {
 });
 
 router.get("/get-results", async function (req, res, next) {
-  const locations = Object.values(req.query).filter((v) => !!v);
+  const locations = Object.values(req.query)
+    .filter((v) => !!v)
+    .map((l) => l.replace(" ", ""));
 
   const results = await getResults(locations);
 
