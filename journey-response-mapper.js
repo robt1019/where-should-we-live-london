@@ -132,7 +132,10 @@ const getResults = async (locationsToCheck) => {
 
   const sortedListWithDetails = sorted.map((key) => {
     return {
-      location: key,
+      location: key
+        .split(",")
+        .map((i) => i.slice(0, 6))
+        .join(","),
       averageJourneyTime: Math.round(withAverageAndSpread[key].average),
       spread: Math.round(withAverageAndSpread[key].spread.diff),
       journeys: withAverageAndSpread[key].journeys,
