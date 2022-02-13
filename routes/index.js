@@ -12,15 +12,14 @@ router.get("/get-results", async function (req, res, next) {
 
   const results = await getResults(locations);
 
-  if (!results.length) {
+  if (results[0]?.length === 0) {
     res.render("error", {
       message: "Sorry that did not work. Please try again in a minute!",
+      error: {},
     });
+  } else {
+    res.render("results", { data: results });
   }
-
-  console.log(results);
-
-  res.render("results", { data: results });
 });
 
 module.exports = router;
