@@ -3,6 +3,29 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+form {
+  margin: 16px;
+}
+
+input {
+  margin: 8px;
+}
+
+
+@media (max-width: 900px) {
+  label {
+    width: 100%
+  }
+  input {
+    width: 100%;
+    margin-left: 0;
+  }
+  button {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
 a {
   color: #00B7FF;
 }
